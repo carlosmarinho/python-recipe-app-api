@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 class AdminSiteTest(TestCase):
+    
 
     def setUp(self):
         self.client = Client()
@@ -39,4 +40,3 @@ class AdminSiteTest(TestCase):
         res = self.client.get(url)
 
         self.assertEqual(res.status_code, 200)
-        
